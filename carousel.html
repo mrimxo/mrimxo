@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Подключаем стили Glide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+    <style>
+        /* Кастомизация под GitBook */
+        .glide__slide {
+            text-align: center;
+            padding: 20px;
+        }
+        .glide__slide img {
+            max-width: 100%;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .glide__caption {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <!-- Слайд 1 -->
+                <li class="glide__slide">
+                    <img src="https://github.com/mrimxo/mrimxo/blob/93f0db5eff4ed635dcbe5423f7ed826afb43fa83/%7B2C30CF34-F3FB-4EB2-88DD-AE8B98096A47%7D.png " alt="Шаг 1">
+                    <div class="glide__caption">Шаг 1: Откройте сайт и нажмите "Регистрация"</div>
+                </li>
+                
+                <!-- Слайд 2 -->
+                <li class="glide__slide">
+                    <img src="https://github.com/mrimxo/mrimxo/blob/93f0db5eff4ed635dcbe5423f7ed826afb43fa83/%7BCC7B2F8D-0C23-49C9-B192-4872B4243775%7D.png " alt="Шаг 2">
+                    <div class="glide__caption">Шаг 2: Введите ваш email и пароль</div>
+                </li>
+   
+            </ul>
+        </div>
+        
+        <!-- Навигация -->
+        <div class="glide__arrows" data-glide-el="controls">
+            <button class="glidearrow glidearrow--left" data-glide-dir="<">←</button>
+            <button class="glidearrow glidearrow--right" data-glide-dir=">">→</button>
+        </div>
+        
+        <!-- Буллеты -->
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <!-- Добавьте буллеты для других слайдов -->
+        </div>
+    </div>
+
+    <!-- Подключаем скрипты -->
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        new Glide('.glide', {
+            type: 'carousel',
+            perView: 1,
+            autoplay: 5000,
+            hoverpause: true
+        }).mount();
+    </script>
+</body>
+</html>
